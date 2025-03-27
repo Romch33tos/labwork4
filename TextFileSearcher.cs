@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-public class FileSearcher
+public class TextFileSearcher
 {
   public List<string> SearchFiles(string directory, string keyword)
   {
