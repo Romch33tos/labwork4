@@ -25,6 +25,7 @@ public class TextHistory
     {
       return _TextMementos.Pop().State;
     }
+    
     return null;
   }
 }
