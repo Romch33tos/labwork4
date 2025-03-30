@@ -1,29 +1,29 @@
 using System;
 
-public class Memento
+public class TextMemento
 {
   public TextFile State { get; }
 
-  public Memento(TextFile state)
+  public TextMemento(TextFile state)
   {
     State = state;
   }
 }
 
-public class Caretaker
+public class TextHistory
 {
-  private readonly Stack<Memento> _mementos = new Stack<Memento>();
+  private readonly Stack<TextMemento> _TextMementos = new Stack<TextMemento>();
 
   public void Save(TextFile file)
   {
-    _mementos.Push(new Memento(file));
+    _TextMementos.Push(new TextMemento(file));
   }
 
   public TextFile Undo()
   {
-    if (_mementos.Count > 0)
+    if (_TextMementos.Count > 0)
     {
-      return _mementos.Pop().State;
+      return _TextMementos.Pop().State;
     }
     return null;
   }
