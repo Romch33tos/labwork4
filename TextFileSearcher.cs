@@ -6,7 +6,7 @@ public class TextFileSearcher
   public List<string> SearchFiles(string directory, string keyword)
   {
     List<string> foundFiles = new List<string>();
-    var files = Directory.GetFiles(directory, "*.xml");
+    var files = Directory.GetFiles(directory, "*.*");
 
     foreach (var file in files)
     {
